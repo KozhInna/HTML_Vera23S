@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #6dc16d;
+  font-family: "Lato", sans-serif;
+}
+
+/* text-decoration: none; - delete underline */
+a {
+  color: coral;
+  text-decoration: none;
+}
+
+/* when we add Width - value, then margin - auto  works calculates equal from each side*/
+#container {
+  margin: 50px auto;
+  margin-bottom: 50px;
+  width: 300px;
+}
+.form-wrap {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+.form-group {
+  margin: 20px 0;
+}
+.form-group label {
+  display: block;
+  font-size: 10px;
+  margin-bottom: 2px;
+  color: grey;
+  text-align: left;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid grey;
+}
+
+.form-wrap button {
+  width: 80%;
+  background-color: coral;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 12px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.form-wrap h1,
+.form-wrap p {
+  margin-bottom: 20px;
+}
+.form-wrap .bottom-text {
+  font-size: 12px;
+}
+footer {
+  margin: 20px auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.form-wrap .bottom-text a:hover {
+  text-decoration: underline;
+}
+footer a:hover {
+  color: white;
+  font-weight: bold;
+}
+
+.form-wrap button:hover {
+  background-color: #0f5f0f;
+}

@@ -1,0 +1,19 @@
+body {
+  font-family: "Dekko", cursive;
+  font-size: 16px;
+}
+table,
+th,
+td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  padding: 10px;
+}
+main {
+  margin: 50px;
+  width: 50%;
+}
+.center {
+  background-color: rgb(255, 115, 0);
+  color: white;
+}

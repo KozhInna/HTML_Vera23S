@@ -1,0 +1,18 @@
+body {
+  font-family: "Comic Neue", cursive;
+  background-color: hwb(208 67% 5% / 0.7);
+  color: #e46739;
+}
+p {
+  font-size: 16px;
+}
+footer p {
+  font-size: 12px;
+}
+h1,
+h2 {
+  font-family: "Dekko", cursive;
+}
+img {
+  float: left;
+}

@@ -1,0 +1,15 @@
+body {
+  background-color: steelblue;
+}
+
+#my_id {
+  color: khaki;
+  text-align: center;
+}
+
+.my_class {
+  font-family: verdana, sans-serif;
+  font-size: 20px;
+}
+
+/* This is a comment */
