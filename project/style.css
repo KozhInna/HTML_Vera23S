@@ -1,18 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-  font-family: "Comic Neue", cursive;
-  background-color: hwb(208 67% 5% / 0.7);
-  color: #e46739;
+  font-family: "Neuton", serif;
+
+  font-size: 15px;
+  color: #171d29;
 }
-p {
-  font-size: 16px;
+
+footer {
+  background-color: #444;
+  color: #fff;
 }
-footer p {
+.copyright {
+  padding: 20px 0;
+  text-align: center;
   font-size: 12px;
 }
 h1,
 h2 {
-  font-family: "Dekko", cursive;
+  color: #db5e24;
 }
-img {
-  float: left;
+
+.projects-box,
+.about-box,
+.skills-box {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+h2 {
+  margin-bottom: 20px;
+}
+section {
+  padding: 40px 40px;
+}
+.about {
+  background-color: rgb(170, 208, 242, 0.5);
+}
+header {
+  background-image: url(/img/background2.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: inherit;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style-type: none;
+  margin-bottom: 70px;
+}
+.author {
+  font-size: 40px;
+
+  text-align: center;
+  padding: 40px;
+}
+.welcome {
+  /* font-family: "Dekko", cursive; */
+  color: #d3450c;
+  font-size: 70px;
+  text-align: center;
+  font-weight: 800;
+}
+/* Contact form */
+
+.form-container {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.form {
+  list-style: none;
+}
+
+.form label {
+  display: inline-block;
+  text-align: left;
+  width: 120px;
+  font-size: 15px;
+  font-family: inherit;
+}
+.form input,
+.form textarea {
+  width: 300px;
+  font-size: inherit;
+  font-family: inherit;
+}
+/* .form-group {
+  border: #d3450c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+} */
+form li {
+  margin-bottom: 20px;
+}
+textarea {
+  height: 100px;
+}
+.contact-me {
+  padding: 30px 0 0 0;
+}
+button {
+  border: none;
+  padding: 10px 20px;
+  background-color: #db5e24;
+  color: #fff;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 15px;
+}
+button:hover {
+  background-color: #d3450c;
 }
