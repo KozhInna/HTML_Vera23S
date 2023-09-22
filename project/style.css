@@ -96,6 +96,9 @@ nav ul {
   width: 300px;
   font-size: inherit;
   font-family: inherit;
+  padding: 5px 5px;
+  border-radius: 3px;
+  border: none;
 }
 /* .form-group {
   border: #d3450c;
