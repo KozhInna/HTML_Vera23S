@@ -46,7 +46,7 @@ body {
     "footer footer footer footer";
   grid-gap: 0.4rem;
   max-width: 1000px;
-  margin: 52px sdc auto;
+  margin: 52px auto;
   grid-auto-rows: 1fr; /* tell grid container to creat rows if needed */
 }
 .header {
