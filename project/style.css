@@ -2,14 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
-  font-family: "Neuton", serif;
+  font-family: "Familjen Grotesk", sans-serif;
 
   font-size: 15px;
-  color: #171d29;
+  color: #444;
+  /* width: 1200px; */
+  margin: 0 auto;
 }
-
+header {
+  background-image: url(/img/background2.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
 footer {
   background-color: #444;
   color: #fff;
@@ -21,12 +34,11 @@ footer {
 }
 h1,
 h2 {
-  color: #db5e24;
+  color: #ed6308;
+  font-family: "Abril Fatface", cursive;
 }
 
-.projects-box,
-.about-box,
-.skills-box {
+.about-box {
   display: flex;
   gap: 20px;
   align-items: flex-start;
@@ -40,38 +52,24 @@ section {
 .about {
   background-color: rgb(170, 208, 242, 0.5);
 }
-header {
-  background-image: url(/img/background2.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 500px;
-}
+
 a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   color: inherit;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  list-style-type: none;
-  margin-bottom: 70px;
-}
-.author {
-  font-size: 40px;
-
-  text-align: center;
-  padding: 40px;
-}
 .welcome {
   /* font-family: "Dekko", cursive; */
-  color: #d3450c;
-  font-size: 70px;
-  text-align: center;
+  grid-column: 1 / span 2;
+  align-self: end;
+  justify-self: center;
+  color: #ed6308;
+  font-size: 3rem;
+
   font-weight: 800;
+  font-family: "Abril Fatface", cursive;
 }
 /* Contact form */
 
@@ -100,14 +98,7 @@ nav ul {
   border-radius: 3px;
   border: none;
 }
-/* .form-group {
-  border: #d3450c;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  margin-bottom: 20px;
-} */
+
 form li {
   margin-bottom: 20px;
 }
@@ -128,4 +119,159 @@ button {
 }
 button:hover {
   background-color: #d3450c;
+}
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  list-style-type: none;
+}
+.author {
+  align-self: center;
+  justify-self: start;
+  padding-left: 4rem;
+}
+
+nav {
+  align-self: center;
+  justify-self: end;
+  padding-right: 4rem;
+}
+.projects-box {
+  display: flex;
+  justify-content: space-between;
+}
+.project-photo {
+  width: 330px;
+}
+.project {
+  border: 2px solid rgb(215, 215, 215, 0.5);
+  padding: 10px;
+  line-height: 2rem;
+}
+
+.project-skills {
+  font-style: italic;
+  color: rgb(68, 68, 68, 0.6);
+}
+.see-more {
+  color: #59a4e8;
+}
+.skills-box {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.skill-container {
+  background-color: rgb(230, 230, 230);
+  height: 10rem;
+  width: 10rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  /*  display: flex;
+  justify-content: center; */
+  /* align-content: center; */
+  /* padding: 20px 0 0 0; */
+  font-size: 12px;
+}
+span {
+  font-size: 50px;
+  color: rgba(14, 13, 13);
+  align-self: self-end;
+}
+
+.container-bar {
+  width: 100%;
+  background-color: rgb(247, 245, 245);
+  border-radius: 2px;
+  width: 5rem;
+  align-self: self-start;
+}
+
+.html {
+  padding: 7px 0;
+  width: 90%;
+  background-color: orange;
+  border: 1px solid orange;
+  border-radius: 2px;
+}
+
+.css {
+  padding: 7px 0;
+  width: 90%;
+  background-color: orange;
+  border: 1px solid orange;
+  border-radius: 2px;
+}
+
+.js {
+  padding: 7px 0;
+  width: 40%;
+  background-color: orange;
+  border: 1px solid orange;
+  border-radius: 2px;
+}
+.python {
+  padding: 7px 0;
+  width: 10%;
+  background-color: orange;
+  border: 1px solid orange;
+  border-radius: 2px;
+}
+/* mobile menu */
+.mobile {
+  display: none;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+.btn-back {
+  border: none;
+  box-shadow: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #59a4e8;
+  color: #fff;
+}
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+/* do smth at this breakpoint */
+@media (max-width: 900px) {
+  .mobile {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+  ul.responsive {
+    display: block;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+  }
+  ul.responsive li {
+    display: block;
+    margin: 1rem;
+  }
+}
+.btn-back:hover {
+  background-color: #0b68bf;
+}
+nav li {
+  display: inline-block;
 }
