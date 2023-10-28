@@ -4,12 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My web page</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg"/>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Familjen+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -23,65 +21,75 @@
     />
   </head>
   <body>
-    <div class="portfolio-container">
-      <header>
+
+      <header class="sticky">
+        <div class="navigation-bar">
         <h1 class="author">Inna Kozhina</h1>
 
-        <nav>
+        <nav >
           <button class="mobile">
             <span class="material-symbols-outlined"> menu </span>
           </button>
-          <ul>
+          <ul >
             <li><a href="#projects">Projects</a></li>
             <li><a href="#aboutMe">About me</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#contactme">Contact me</a></li>
             <li>
               <a href="https://en.bc.fi/" target="_blank">More about BCH</a>
             </li>
           </ul>
         </nav>
-        <div class="welcome">Welcome to my portfolio</div>
+      </div>
       </header>
 
       <main>
+        <section class="section-hero">
+        
+          <h1 class="hero-title">Welcome to my portfolio</h1>
+            
+        </section>
+        
         <section class="projects">
           <h2 id="projects">Projects</h2>
           <div class="projects-box">
             <div class="project item1">
               <img
                 class="project-photo"
-                src="img/project1.jpg"
+                src="img/project1.png"
                 alt="wooden pathway"
               />
-              <h3 class="project-name">Lorem ipsum dolor</h3>
+              <h3 class="project-name">Decision app</h3>
               <p class="project-skills">HTML, CSS, JavaScript</p>
-              <p class="see-more"><a href="#">See more</a></p>
+              <p class="see-more" ><a  href="https://public.bc.fi/s2200737/Decision_app/">See more</a></p>
             </div>
 
             <div class="project item2">
               <img
                 class="project-photo"
-                src="img/project2.jpg"
+                src="img/project2.png"
                 alt="palm shelter"
               />
-              <h3 class="project-name">Lorem ipsum dolor</h3>
-              <p class="project-skills">UX design</p>
-              <p class="see-more"><a href="#">See more</a></p>
+              <h3 class="project-name">Pizza app</h3>
+              <p class="project-skills">HTML, CSS, JavaScript</p>
+              <p class="see-more"><a href="https://public.bc.fi/s2200737/Pizza_app/">See more</a></p>
             </div>
             <div class="project item3">
               <img
                 class="project-photo"
-                src="img/project3.jpg"
+                src="img/project3.png"
                 alt="bike in front a white wall"
               />
-              <h3 class="project-name">Lorem ipsum dolor</h3>
-              <p class="project-skills">React JS, Node JS</p>
-              <p class="see-more"><a href="#">See more</a></p>
+              <h3 class="project-name">Speed game</h3>
+              <p class="project-skills">HTML, CSS, JavaScript</p>
+              <p class="see-more"><a href="https://public.bc.fi/s2200737/speed_Game/">See more</a></p>
             </div>
           </div>
         </section>
         <section class="about">
           <h2 id="aboutMe">About me</h2>
+         
           <div class="about-box">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
@@ -109,12 +117,11 @@
               laborum. Aliquid quo ducimus laborum expedita perspiciatis quidem
               distinctio alias eveniet, quasi at nesciunt reprehenderit?
             </p>
-            <img
-              src="img/about.jpg"
-              alt="legs from knees in black jeans and black and white sneakers on feet"
-              width="200"
-            />
-          </div>
+            <div class="about-img-box">
+              <img  class="about-img" src="img/about.jpg" alt="girl typing"/>
+
+            </div>
+            </div>
         </section>
 
         <section class="skills">
@@ -154,26 +161,26 @@
           </div>
         </section>
       </main>
-    </div>
+    
     <footer>
       <div class="form-container">
-        <form class="contact-me" action="" method="">
-          <h2>Contact me</h2>
+        <form id="contactme" class="contact-me" action="" method="">
+          <h2 class="contact">Contact me</h2>
           <ul class="form">
             <li>
               <label for="name">Name</label>
-              <input id="name" type="text" name="user-name" />
+              <input id="name" type="text" name="user-name" placeholder="Your name"/>
             </li>
             <li>
               <label for="email">Email</label>
-              <input id="email" name="user-email" type="email" />
+              <input id="email" name="user-email" type="email" placeholder="Your email"/>
             </li>
             <li>
               <label for="msg">Message</label>
-              <textarea id="msg" name="textarea"></textarea>
+              <textarea id="msg" name="textarea" placeholder="Write something"></textarea>
             </li>
             <li class="btn">
-              <button type="submit">Send your message</button>
+              <button class="btn-message" type="submit">Send your message</button>
             </li>
           </ul>
         </form>

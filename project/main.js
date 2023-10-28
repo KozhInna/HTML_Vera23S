@@ -1,34 +1,24 @@
 const goBackButton = document.querySelector("#backToTop");
 const mobButton = document.querySelector(".mobile");
 const nav = document.querySelector("nav ul");
-const menuItems = document.querySelectorAll("nav ul li a");
-const header = document.querySelector("header");
 
-//triger for scroll func
+const menuItems = document.querySelectorAll("nav ul li a");
+const navigation = document.querySelector(".navigation-bar");
+
+//trigger for scroll func
 window.onscroll = function () {
   scrollFunction();
 };
 
-const getToTop = () => {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0; /* for 2nd broser */
-};
-
-// code from W#S about scrolling, for two browsers
+// code from W3S about scrolling, for two browsers
 function scrollFunction() {
-  if (
-    document.body.scrollTop > 200 ||
-    document.documentElement.scrollTop > 200
-  ) {
-    goBackButton.style.display = "block";
-  } else {
-    goBackButton.style.display = "none";
-  }
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    header.classList.add("bg");
-  } else {
-    header.classList.remove("bg");
-  }
+  document.body.scrollTop > 200 || document.documentElement.scrollTop > 200
+    ? (goBackButton.style.display = "block")
+    : (goBackButton.style.display = "none");
+
+  document.body.scrollTop > 50 || document.documentElement.scrollTop > 50
+    ? navigation.classList.add("bg")
+    : navigation.classList.remove("bg");
 }
 
 const mobMenu = () => {
@@ -38,8 +28,10 @@ const mobMenu = () => {
 
   if (nav.classList.contains("responsive")) {
     nav.classList.remove("responsive");
+    navigation.classList.remove("responsive");
   } else {
     nav.classList.add("responsive");
+    navigation.classList.add("responsive");
   }
 };
 
@@ -49,3 +41,10 @@ const getToTop = () => {
 };
 goBackButton.addEventListener("click", getToTop);
 mobButton.addEventListener("click", mobMenu);
+
+/* window.onscroll = function () {
+  let top = window.scrollY;
+  if (top >= 100) {
+    author.classList;
+  }
+}; */
